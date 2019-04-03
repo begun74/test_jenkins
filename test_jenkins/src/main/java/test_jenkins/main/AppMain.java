@@ -11,7 +11,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @ComponentScan({ "test_jenkins" })
-////@PropertySource(value = { "classpath:app.properties" })
+/////@PropertySource(value = { "classpath:app.properties" })
 public class AppMain extends SpringBootServletInitializer  implements CommandLineRunner {
 
 
