@@ -4,8 +4,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.springframework</groupId>
-    <artifactId>test_jenkins</artifactId>
-    <version>1.0.0</version>
+    <artifactId>tjapp</artifactId>
+    <version>0.0.1</version>
 
 	<properties>
         <java.version>1.8</java.version>
@@ -172,80 +172,12 @@
 
     <build>
         <plugins>
-            <!-- plugin>
+
+            <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
             
-            <plugin>
-			    <groupId>io.fabric8</groupId>
-			    <artifactId>docker-maven-plugin</artifactId>
-			    <version>0.28.0</version>
-			    
-			
-			    <executions>
-			        <execution>
-			            <id>Build docker container</id>
-			            <phase>package</phase>
-			            <goals>
-			                <goal>build</goal>
-			            </goals>
-			        </execution>
-			        <execution>
-			            <id>Push docker container</id>
-			            <phase>deploy</phase>
-			            <goals>
-			                <goal>push</goal>
-			            </goals>
-			        </execution>
-			    </executions>
-			    <configuration>
-
-				   <dockerHost>http://docker.io</dockerHost>
-				    <authConfig>
-				      <push>
-				         <username>begun74</username>
-				         <password>486567java</password>
-				      </push>
-				    </authConfig>
-			        <images>
-			            <image>
-			                <name>${project.artifactId}</name>
-			                <registry>registry.io</registry>
-			                <build>
-			                    <from>java:8</from>
-			                    <tags>
-			                        <tag>${project.version}</tag>
-			                    </tags>
-			                    <ports>
-			                        <port>8080</port>
-			                    </ports>
-			                    <cmd>
-			                        <shell>java -cp 'jars/*' test_jenkins.main.AppMain '/config.file'</shell>
-			                    </cmd>
-			                    <assembly>
-			                        <basedir>/</basedir>
-			                        <inline>
-			                            <dependencySet>
-			                                <outputDirectory>jars</outputDirectory>
-			                            </dependencySet>
-			                            <files>
-			                                <file>
-			                                    <source>${project.build.directory}/${project.build.finalName}.jar</source>
-			                                    <outputDirectory>jars</outputDirectory>
-			                                </file>
-			                                <file>
-			                                    <source>${project.basedir}/src/main/config/config.yml</source>
-			                                    <outputDirectory>/</outputDirectory>
-			                                </file>
-			                            </files>
-			                        </inline>
-			                    </assembly>
-			                </build>
-			            </image>
-			        </images>
-			    </configuration>
-			</plugin -->
         </plugins>
     </build>
 
