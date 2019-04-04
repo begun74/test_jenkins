@@ -14,7 +14,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 public class AppController {
 
-	
+	//login
 	@RequestMapping("/")
     public String index(HttpSession session,
     		Model model,
