@@ -8,7 +8,7 @@ FROM java
 
 WORKDIR /tjapp
 
-COPY target\tjapp-0.0.1.jar /tjapp
+COPY target/tjapp-0.0.1.jar /tjapp
 
 #RUN java -jar tjapp.jar
 
